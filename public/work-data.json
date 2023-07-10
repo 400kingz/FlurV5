@@ -40,6 +40,26 @@
         ]
     },
     {
+        "id": "flurv4",
+        "title": "flur V4",
+        "details": {
+            "description": "Our 4th iteration of our website, basic html css and js.",
+            "summary": "html"
+        },
+        "date": "June 2022",
+        "roles": [
+            "UI/UX Design",
+            "Front-End Web Development"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://master.d3uvw4eg4o83zy.amplifyapp.com"
+            }
+        ]
+    },
+    {
         "id": "kic",
         "title": "Advanced American Academy",
         "details": {
