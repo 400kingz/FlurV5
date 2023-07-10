@@ -68,12 +68,12 @@ onMount(async () => {
     justify-content: center
     align-items: center
     z-index: 1000
-    background-color: #222224
+    background-color: #08090A
 
     .loader-wrapper
         position: relative
         display: block
-        height: 0.1rem
+        height: 0.2rem
         width: 20rem
 
         .loader, .loader-background
@@ -86,11 +86,11 @@ onMount(async () => {
             background-color: rgba(255, 255, 255, 0.1)
 
         .loader 
-            background-color: white
-            transition: width 0.8s ease
+            background-color: #745CFF
+            transition: width 0.8s ease-in
 
         .outro
-            transition: width 0.8s ease
+            transition: width 0.7s ease-out
             right: 0 !important
             width: 0
 

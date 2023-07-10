@@ -69,11 +69,16 @@ onMount(async () => {
 
 
 <style lang="sass">
+\:global(html)
+	cursor: none
+	-webkit-user-select: none
+	::-webkit-scrollbar
+		display: none
 	
 \:global(body)
-	background-color: #222224
+	background-color: #08090A
 	overflow: hidden
-	color: white
+	color: #FAFFFD
 	margin: 0
 	padding: 0
 	-moz-osx-font-smoothing: grayscale
@@ -96,7 +101,7 @@ onMount(async () => {
 
 #nav-bar
 	position: fixed
-	top: 10vh
+	top: 6vh
 	z-index: 100
 
 </style>

@@ -70,7 +70,7 @@ function introAnimations() {
 	<div class="flex-wrapper ico" style="z-index: 21;">
 		<img 
 			bind:this={logoElem} 
-			src="assets/imgs/logo.svg"
+			src="assets/imgs/logo.png"
 			class = "logo-icon clickable"
 			alt="Logo"
 			draggable="false"
@@ -92,10 +92,10 @@ function introAnimations() {
 					<div on:click={() => navigate($aboutAnchor)} in:mobileTransitionSwitcher={{ delay: 300 }}>About</div>
 				</li>
 				<li class="mobile">
-					<a href="mailto:musabhassan04@gmail.com" target="_blank" in:mobileTransitionSwitcher={{ delay: 350 }}>Email</a>
+					<a href="mailto:hello@flur.pro" target="_blank" in:mobileTransitionSwitcher={{ delay: 350 }}>Email</a>
 				</li>
 				<li bind:this={githubElem}>
-					<a href="https://github.com/Musab-Hassan" target="_blank" in:mobileTransitionSwitcher={{ delay: 400 }}>Github</a>
+					<a href="https://calendly.com/flur/30min" target="_blank" in:mobileTransitionSwitcher={{ delay: 400 }}>Book</a>
 				</li>
 				{/key}
 			</ul>
@@ -147,7 +147,6 @@ function introAnimations() {
 			position: relative
 			display: inline-block
 			height: 100%
-			width: 100%
 
 	@media only screen and (min-width: 950px)
 		ul.nav-list

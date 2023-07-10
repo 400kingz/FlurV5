@@ -66,6 +66,29 @@ function introAnimations() {
 	});
 	backgroundImage.style.transform = "translateY(80%) scale(1.4)";
 
+	// Animate signature svg
+	Object.assign(path1.style, {
+		opacity: 0,
+		strokeDasharray: 365,
+		strokeDashoffset: 365
+	});
+	Object.assign(path2.style, {
+		opacity: 0,
+		strokeDasharray: 85,
+		strokeDashoffset: 85
+	});
+	Object.assign(path3.style, {
+		opacity: 0,
+		strokeDasharray: 45,
+		strokeDashoffset: 45
+	});
+	Object.assign(path4.style, {
+		opacity: 0,
+		strokeDasharray: 180,
+		strokeDashoffset: 180
+	});
+
+
 	anime({
 		targets: backgroundContainer,
 		height: "100%",
@@ -81,6 +104,13 @@ function introAnimations() {
 		targets: backgroundImage,
 		translateY: "0",
 		scale: 1,
+		easing: "cubicBezier(0.165, 0.84, 0.44, 1)",
+		duration: 1500,
+		delay: 500
+	});
+	anime({
+		targets: path1, path2, path3, path4,
+		opacity: 1,
 		easing: "cubicBezier(0.165, 0.84, 0.44, 1)",
 		duration: 1500,
 		delay: 500
@@ -106,33 +136,33 @@ function introAnimations() {
 
 
 
-<div id="content-container" style="padding-top: 23vh" bind:this={homeContainer}>
+<div id="content-container" style="padding-top: 22vh" bind:this={homeContainer}>
 	<div class="content-wrapper">
 		<div class="flex">
 			<div class="flex-wrapper first">
 
-				<svg id="signature" class="h-signature" x="0px" y="0px" viewBox="0 0 190 136.9">
+				<svg id="signature" class="h-signature" x="0px" y="0px" viewBox="0 0 375 374.999991">
 					<g>
 						<path
 							bind:this={path1}
 							class="path-1"
 							style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-							d="M38.1,51c0,0,4.9-34.4,39.6-37.7c11.1-1.1-11.5,86.2-48.9,87.5c-18.5,0.6,19-69.3,51.7-84.4c21.3-9.8,15.3,26,15.3,26s6.2-9.3,7.9-6.1c1.7,3.1,0.1,5.1,6.9-1.9c1-1.2,13.9,3.3,18.8-1.3c1.4-1.3,6.4,1.3,6.4,1.3"/>
+							d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
 						<path
 							bind:this={path2}
 							class="path-2"
 							style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-							d="M132.2,48.3l-23.9,78.8"/>
+							d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
 						<path
 							bind:this={path3}
 							class="path-3"
 							style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-							d="M110.3,55.3c0,0-0.7,11.7-2.8,18s-6.7,20.2-6.9,24.1"/>
+							d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
 						<path
 							bind:this={path4}
 							class="path-4"
 							style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-							d="M122,74.4c0,0-5.9-8-17.1-6.7c-11.1,1.3-20.2,11.3-21.1,12.6c-0.9,1.3-10,9.6,2.2,15s38.9-7.2,38.9-7.2s17.8-10,18.9-10s-4.6,5.9-4.3,7.2c0.4,1.3,2.8,2,7.2-1.5c1-0.8,17.2-0.8,22.2,1c1.9,0.7,3.5-0.2,5-1.4c1-0.8,9.4,2,9.4,2"/>
+							d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
 					</g>
 				</svg>
 
@@ -141,15 +171,15 @@ function introAnimations() {
 			<div class="flex-wrapper second">
 				<h1 class = "title">
 					<div class="title-mask">
-						<div class="word" bind:this={titleWord1}>Musab</div>
+						<div class="word" bind:this={titleWord1}>FLUR</div>
 					</div><br> 
 					<div class="title-mask">
-						<div class="word" bind:this={titleWord2}>Hassan</div>
+						<div style="color: #8c52ff;" class="word" bind:this={titleWord2}>PRO</div>
 					</div>
 				</h1>
 				<div class="occupation mask">
 					<p class = "paragraph" bind:this={shortDetails}>
-						web developer from british columbia, canada
+						Internet Identity Done Right
 					</p>
 				</div>
 				<div class="wrapper action-mask">
@@ -213,7 +243,7 @@ function introAnimations() {
 			justify-content: center
 
 			&.second
-				margin-right: 5vw 
+				margin-right: 3vw 
 				justify-content: flex-end
 
 			h1
@@ -233,7 +263,7 @@ function introAnimations() {
 
 			.occupation
 				position: relative
-				margin-top: 8vh
+				margin-top: 1vh
 
 			.action-mask
 				margin-top: 10vh

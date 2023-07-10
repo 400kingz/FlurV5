@@ -35,25 +35,25 @@ async function introAnimations() {
 
                 // Signature animation using svg strokDashOffset
                 signaturePath1.animate(animation, {
-                    duration: 1000,
+                    duration: 2000,
                     delay: 0,
                     easing: 'cubic-bezier(.72,.3,.25,1)',
                     fill: 'forwards' 
                 });
                 signaturePath2.animate(animation, {
-                    duration: 300,
+                    duration: 500,
                     delay: 1000,
                     easing: 'cubic-bezier(.47,.41,.26,1)',
                     fill: 'forwards' 
                 });
                 signaturePath3.animate(animation, {
-                    duration: 200,
+                    duration: 500,
                     delay: 1300,
                     easing: 'cubic-bezier(.47,.41,.26,1)',
                     fill: 'forwards' 
                 });
                 signaturePath4.animate(animation, {
-                    duration: 1000,
+                    duration: 2000,
                     delay: 1500,
                     easing: 'cubic-bezier(.47,.41,.26,1)',
                     fill: 'forwards' 
@@ -82,59 +82,50 @@ async function introAnimations() {
     <div class="flex-wrapper">
         <div class="logo-wrapper">
             <div class="inline-flex" bind:this={logoElem}>
-                <img src="assets/imgs/logo.svg" alt="mh logo" class="logo">
+                <img src="assets/imgs/logo.png" alt="mh logo" class="logo">
             </div>
         </div>
 
         <div class="status-wrapper">
-            {#await dataFetch then fetchedData}
-                {#if fetchedData.availablity_date == ""}
                     <p class="large-text" bind:this={statusElem}>
-                        i am currently accepting freelance work, <br>you may reach me on my email.
+                        We are currently accepting freelance work, <br>you may reach out via email or <a href="https://calendly.com/flur/30min">here</a>.
                     </p>
-                {:else}
-                    <p class="large-text" bind:this={statusElem}>
-                        i am available for freelance work after <br> {fetchedData.availablity_date}.
-                    </p>
-                {/if}
-            {/await}
-            <a class="button large-text" bind:this={fullEmailLinkElem} href="mailto:musabhassan04@gmail.com" target="_blank">musabhassan04@gmail.com</a>
+            <a class="button large-text" bind:this={fullEmailLinkElem} href="mailto:hello@flur.pro" target="_blank">hello@flur.pro</a>
         </div>
         
         <div class="credits-wrapper" bind:this={creditsElem}>
             <p class="year">© {currentYear}</p>
-            <p class="credits">
-                designed and developed by musab hassan<br>this webste is open source on github
-            </p>
         </div>
     </div>
 
     <!-- Right side -->
 	<div class="flex-wrapper decor">
-        <!-- Musab Hassan SVG Signature -->
-        <svg id="signature" class="name-signature" x="0px" y="0px" viewBox="0 0 190 136.9" style="stroke: rgb(79, 78, 85);">
-            <g>
-                <path
-                    bind:this={signaturePath1}
-                    class="path-1"
-                    style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-                    d="M38.1,51c0,0,4.9-34.4,39.6-37.7c11.1-1.1-11.5,86.2-48.9,87.5c-18.5,0.6,19-69.3,51.7-84.4c21.3-9.8,15.3,26,15.3,26s6.2-9.3,7.9-6.1c1.7,3.1,0.1,5.1,6.9-1.9c1-1.2,13.9,3.3,18.8-1.3c1.4-1.3,6.4,1.3,6.4,1.3"/>
-                <path
-                    bind:this={signaturePath2}
-                    class="path-2"
-                    style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-                    d="M132.2,48.3l-23.9,78.8"/>
-                <path
-                    bind:this={signaturePath3}
-                    class="path-3"
-                    style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-                    d="M110.3,55.3c0,0-0.7,11.7-2.8,18s-6.7,20.2-6.9,24.1"/>
-                <path
-                    bind:this={signaturePath4}
-                    class="path-4"
-                    style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
-                    d="M122,74.4c0,0-5.9-8-17.1-6.7c-11.1,1.3-20.2,11.3-21.1,12.6c-0.9,1.3-10,9.6,2.2,15s38.9-7.2,38.9-7.2s17.8-10,18.9-10s-4.6,5.9-4.3,7.2c0.4,1.3,2.8,2,7.2-1.5c1-0.8,17.2-0.8,22.2,1c1.9,0.7,3.5-0.2,5-1.4c1-0.8,9.4,2,9.4,2"/>
-            </g>
+        <!-- flur SVG Signature -->
+        <svg id="signature" class="name-signature" x="0px" y="0px" viewBox="0 0 375 374.999991" style="stroke: rgb(79, 78, 85);">
+                <a href="https://calendly.com/flur/30min">
+                    <g>
+                        <path
+                            bind:this={signaturePath1}
+                            class="path-1"
+                            style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
+                            d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
+                        <path
+                            bind:this={signaturePath2}
+                            class="path-2"
+                            style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
+                            d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
+                        <path
+                            bind:this={signaturePath3}
+                            class="path-3"
+                            style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
+                            d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
+                        <path
+                            bind:this={signaturePath4}
+                            class="path-4"
+                            style="fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;"
+                            d="M 374.972656 89.980469 L 361.8125 172.980469 L 345.445312 159.113281 C 314.949219 197.691406 262.652344 242.355469 207.371094 274.441406 C 163.226562 300.0625 117.183594 317.65625 78.820312 317.71875 C 60.375 317.746094 43.46875 312.9375 30.085938 304.992188 C -2.847656 285.4375 -14.457031 246.871094 24.863281 214.566406 C 19.585938 220.214844 4.320312 257.386719 30.085938 273.675781 C 42.304688 281.402344 63.769531 284.421875 99.914062 277.144531 C 104.332031 276.257812 108.738281 275.207031 113.132812 274.003906 C 162.355469 260.550781 209.636719 228.453125 245.675781 198.046875 C 248.84375 195.375 251.921875 192.71875 254.90625 190.089844 C 289.992188 159.175781 312.242188 131.960938 311.453125 130.777344 C 309.769531 128.25 296.832031 118.976562 296.832031 118.976562 L 374.972656 89.980469 "/>
+                    </g>
+                </a>
         </svg>
     </div>
 </div>

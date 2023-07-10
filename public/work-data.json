@@ -1,127 +1,100 @@
 [
     {
         "id": "lcml",
-        "title": "Life-Cycle Managment Laboratory",
+        "title": "Founder Portfolio",
         "details": {
-            "description": "A single page web application for managing research and administrative content for LCML at the University of British Columbia",
-            "summary": "Web Application"
+            "description": "Our Supreme Leader's personal portfolio website with a full showcase of his completed and current projects.",
+            "summary": "Sveltekit"
         },
         "date": "April 2022",
         "roles": [
-            "UI/UX Designer",
-            "Full-Stack Web Developer"
+            "Supreme Leader",
+            "Chief Pro"
         ],
         "links": [
             {
                 "type": "web",
                 "text": "Visit Site",
-                "link": "https://lcml.engineering.ok.ubc.ca"
+                "link": "https://zainomran.netlify.app"
             }
         ]
     },
     {
         "id": "v1",
-        "title": "Portfolio 2021",
+        "title": "flur pro",
         "details": {
-            "description": "My personal portfolio website with a full showcase of my completed projects. Received the Awwwards Honorable Mention.",
-            "summary": "Personal Portfolio"
+            "description": "Our 5th iteration of the motherland. Here, we have taken into account every inch of eye land that the user sees.",
+            "summary": "Sveltekit"
         },
-        "date": "May 2021",
+        "date": "July 2023",
         "roles": [
-            "UI/UX Designer",
-            "Front-end Web Developer"
+            "UI/UX Design",
+            "Full Stack Web Development"
         ],
         "links": [
             {
                 "type": "web",
                 "text": "Visit Site",
-                "link": "https://v1.musabhassan.com"
+                "link": "https://flur.pro"
             }
         ]
     },
     {
         "id": "kic",
-        "title": "Kelowna Islamic Center",
+        "title": "Advanced American Academy",
         "details": {
-            "description": "A multi-platform solution consisting of mobile apps, a web app, and server-side solutions for Kelowna Islamic Center.",
-            "summary": "Multi-platform Solutions"
+            "description": "A Dental Academy website for an American school in Iraq with a full student portal and a custom-built LMS",
+            "summary": "Astro"
         },
         "date": "July 2019",
         "roles": [
-            "UI/UX Designer",
-            "Mobile Developer w/ Flutter",
-            "Full-Stack Web Developer"
+            "UI/UX Design",
+            "Full-Stack Web Development"
         ],
         "links": [
             {
-                "type": "android",
-                "text": "View on Google Play",
-                "link": "https://play.google.com/store/apps/details?id=com.kelownamasjid.android.app"
-            },
-            {
-                "type": "ios",
-                "text": "View on App Store",
-                "link": "https://apps.apple.com/us/app/kelowna-islamic-center/id1479503537?ls=1"
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://master.d23eh3y6davk4b.amplifyapp.com"
             }
         ]
     },
     {
         "id": "grillzzy",
-        "title": "Grillzzy Foods",
+        "title": "ARD",
         "details": {
-            "description": "Iconography, branding, and website for a Canadian meat and manufacturing processing start-up",
-            "summary": "Brand Website"
+            "description": "A Reliable Dumpster, a dumpster rental company with a custom-built booking system serving Omaha, NE",
+            "summary": "Gatsby"
         },
-        "date": "Nov 2020",
+        "date": "June 2023",
         "roles": [
-            "Brand Designer",
-            "Web Designer",
-            "Front-End Web Developer"
+            "Web Design",
+            "Full Stack Web Development"
         ],
         "links": [
             {
                 "type": "web",
                 "text": "Visit Site",
-                "link": "https://grillzzy.com"
+                "link": "https://areliabledumpster.vercel.app"
             }
         ]
     },
     {
         "id": "kwa",
-        "title": "Kelowna Wholesale Auto",
+        "title": "You Could be here",
         "details": {
-            "description": "A multipage web application with an inventory management system for a second-hand vehicle dealership",
-            "summary": "Brand Website"
+            "description": "Happy Clients are the best clients. Let's work together to make something great.",
+            "summary": "Any"
         },
-        "date": "Jan 2020",
+        "date": "Oct 2023",
         "roles": [
-            "Website Designer",
-            "Full-Stack Web Developer"
+            "Anything you need"
         ],
         "links": [
             {
                 "type": "web",
-                "text": "Visit Site",
-                "link": "http://kelownawholesaleauto.com/"
-            }
-        ]
-    },
-    {
-        "id": "slickscroll",
-        "title": "SlickScroll",
-        "details": {
-            "description": "An open-source library for developers to easily add smooth scrolling effects to their webpages",
-            "summary": "Personal Project"
-        },
-        "date": "March 2021",
-        "roles": [
-            "Maintainer"
-        ],
-        "links": [
-            {
-                "type": "web",
-                "text": "View on Github",
-                "link": "https://github.com/Musab-Hassan/slickscroll"
+                "text": "Book A Call",
+                "link": "https://calendly.com/flur/30min"
             }
         ]
     }

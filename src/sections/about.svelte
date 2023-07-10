@@ -88,25 +88,25 @@ function section2IntroAnimations() {
 <div id="content-container" class="about" bind:this={aboutSection1Container}>
 	<div class="content-wrapper">
 		<h1 class="title" bind:this={title}>
-			The Name's<br>Musab
+			The Pro<br>Camp
 		</h1>
 		<div bind:this={paragraph}>
 			<p class="paragraph">
-				I'm a web developer from British Columbia, Canada. I specialize in designing and developing web experiences<br><br>I work with organizations and individuals to create beautiful, responsive, and scalable web products tailor-made for them. Think we can make something great together? Let's talk over email.
+				a collaborative journey to elevate your online presence. Our experts will guide you through crafting a captivating website, logo, and brand identity that sets you apart. Together, we'll make your digital dreams a reality!
 			</p>
 		</div>
 		<div class="social-button-wrapper">
 			<div bind:this={emailLink}>
-				<span class="button"><a href="mailto:musabhassan04@gmail.com" target="_blank" class="clickable sublink link">Email Me</a></span>
+				<span class="button"><a href="mailto:hello@flur.pro" target="_blank" class="clickable sublink link">Email</a></span>
 			</div>
 			<div bind:this={githubLink}>
-				<span class="button" bind:this={githubLink}><a href="https://github.com/Musab-Hassan" target="_blank" class="clickable sublink link">Github</a></span>
+				<span class="button" bind:this={githubLink}><a href="https://calendly.com/flur/30min" target="_blank" class="clickable sublink link">Book a call</a></span>
 			</div>
 		</div>
 	</div>
 	<div class="profile-image" bind:this={profilePicContainer}>
 		{#await loadImage("assets/imgs/profile-photo.jpg") then src}
-			<img src="{src}" bind:this={profilePicture} alt="Musab's Cover" class="profile-pic">
+			<img src="{src}" bind:this={profilePicture} alt="flur's Cover" class="profile-pic">
 		{/await}
 	</div>
 </div>
@@ -116,7 +116,7 @@ function section2IntroAnimations() {
 		<ul class="list first">
 			<li class="list-title">
 				<div in:letterSlideIn={{ initDelay: 400 }}>
-					Stuff i use a lot
+					Our Shovels in the Gold Mine
 				</div>
 			</li>
 			<li>
@@ -126,7 +126,6 @@ function section2IntroAnimations() {
 				<div 
 					class="flex-item" 
 					in:maskSlideIn={{ delay: 600 }}>
-					<img src="assets/imgs/svg-icons/angular.svg" alt="angular">
 					<img src="assets/imgs/svg-icons/svelte.svg" alt="svelte">
 				</div>
 			</li>
@@ -159,18 +158,6 @@ function section2IntroAnimations() {
 					in:maskSlideIn={{ delay: 900 }}>
 					<img src="assets/imgs/svg-icons/illustrator.svg" alt="adobe illustrator">
 					<img src="assets/imgs/svg-icons/xd.svg" alt="adobe xd">
-				</div>
-			</li>
-		</ul>
-		<ul class="list">
-			<li class="list-title">
-				<div in:letterSlideIn={{ initDelay: 400 }}>
-					awards
-				</div>
-			</li>
-			<li>
-				<div in:letterSlideIn={{ initDelay: 550 }}>
-					1x — Awwwards Honors
 				</div>
 			</li>
 		</ul>
