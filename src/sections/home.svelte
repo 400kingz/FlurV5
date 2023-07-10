@@ -4,6 +4,7 @@ import anime from "animejs";
 import { onMount } from "svelte";
 import { homeAnchor, loadPagePromise, slickScrollInstance } from "../store";
 import { loadImage } from "../utils";
+import Chat from "../components/chat.svelte";
 
 // DOM Node Binds for animations
 let homeContainer; // Container
@@ -201,6 +202,9 @@ function introAnimations() {
 					<img src="{src}" bind:this={backgroundImage} draggable="false" alt="Home Background" style="width:100%; height: 100%; object-fit: cover;">
 				{/await}
 			</div>
+			
+			<Chat/>
+			
 		</div>
 	</div>
 </div>
