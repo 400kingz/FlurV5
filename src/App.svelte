@@ -8,7 +8,6 @@ import WorkSection from "./sections/work.svelte";
 import AboutSection from "./sections/about.svelte";
 import NavComponent from "./components/nav.svelte"
 import Footer from "./components/footer.svelte";
-import CursorDot from "./components/cursor-dot.svelte"
 import Loader from "./components/loader.svelte";
 
 let scrollContainer;
@@ -46,10 +45,6 @@ onMount(async () => {
 </script>
 
 
-
-<!-- Cursor dot tracking when mouse moves inside the body -->
-<CursorDot></CursorDot>
-
 <!-- Page loading progress bar -->
 {#if loading} <Loader></Loader> {/if}
 
@@ -70,7 +65,6 @@ onMount(async () => {
 
 <style lang="sass">
 \:global(html)
-	cursor: none
 	-webkit-user-select: none
 	::-webkit-scrollbar
 		display: none

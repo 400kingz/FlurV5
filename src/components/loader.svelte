@@ -87,10 +87,10 @@ onMount(async () => {
 
         .loader 
             background-color: #745CFF
-            transition: width 0.8s ease-in
+            transition: width 0.3s ease
 
         .outro
-            transition: width 0.7s ease-out
+            transition: width 0.2s ease
             right: 0 !important
             width: 0
 
