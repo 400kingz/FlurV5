@@ -4,6 +4,11 @@
 
 This is the source code for flur.pro website.
 
+things to do:
+
+Ai chatbot for support questions
+put it behind a sign up wall
+
 [![Visit Live Site](https://img.shields.io/badge/Visit%20Live%20Site-success?style=for-the-badge)](https://flur.pro)
 
 ### Source Information
