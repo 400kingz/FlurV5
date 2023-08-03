@@ -13,11 +13,25 @@ let homeWrapperElem, workWrapperElem, aboutWrapperElem, mobileMenuElem;
 
 let mobileActive: boolean;
 
+const navBar = document.querySelector("nav");
+let prevScrollPos = window.pageYOffset;
+
 onMount(async () => {
+
 	// Wait for page to load
 	await loadPagePromise;
 	// Initiate intro animations
 	introAnimations();
+
+	window.addEventListener('scroll', () => {
+	const currentScrollPos = window.pageYOffset;
+	if (prevScrollPos > currentScrollPos) {
+		navBar.classList.remove('hide-nav');
+	} else {
+		navBar.classList.add('hide-nav');
+	}
+	prevScrollPos = currentScrollPos;
+	});
 });
 
 $: mobileTransitionSwitcher = 
@@ -124,6 +138,10 @@ function introAnimations() {
 
 @import "../consts.sass"
 
+nav.hide-nav 
+	transform: translateY(-100%)
+
+
 .nav-wrapper
 	width: 100vw
 	margin: 0 auto
@@ -135,6 +153,8 @@ function introAnimations() {
 	flex-direction: row
 	justify-content: space-between
 	align-items: center
+	transition: transform 0.5s ease-in-out
+	transform: translateY(var(--nav-bar-top))
 
 	.flex-wrapper.ico
 		overflow: hidden

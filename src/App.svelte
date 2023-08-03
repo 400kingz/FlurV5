@@ -13,6 +13,7 @@ import Loader from "./components/loader.svelte";
 let scrollContainer;
 let navBar;
 let loading = true;
+let isNavVisible = true;
 
 onMount(async () => {
 	// Disable scrolling on initial load
@@ -30,7 +31,7 @@ onMount(async () => {
 	$slickScrollInstance = new slickScroll({
 		root: scrollContainer,
 		easing: "easeOutCirc",
-		duration: 1500,
+		duration: 250,
 		fixedOffsets: [
 			navBar
 		]
@@ -97,5 +98,4 @@ onMount(async () => {
 	position: fixed
 	top: 6vh
 	z-index: 100
-
 </style>

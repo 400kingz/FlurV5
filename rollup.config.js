@@ -7,6 +7,10 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 
+// @fullhuman/postcss-purgecss for purgecss
+
+import postcss from '@fullhuman/postcss-purgecss'
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -46,6 +50,20 @@ export default {
 				dev: !production
 			}
 		}),
+
+		postcss({
+			extract: true,
+			minimize: true,
+			sourceMap: !production,
+			plugins: [
+				require('@fullhuman/postcss-purgecss')({
+					content: ['./public/**/*.html', './src/**/*.svelte'],
+					whitelistPatterns: [/svelte-/, /fa-icon/],
+					defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+				}),
+			],
+		}),
+
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
