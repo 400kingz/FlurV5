@@ -88,9 +88,9 @@ async function introAnimations() {
 
         <div class="status-wrapper">
                     <p class="large-text" bind:this={statusElem}>
-                        We are currently accepting freelance work, <br>you may reach out via email or <a href="https://calendly.com/flur/30min">here</a>.
+                        We are currently accepting freelance work, <br>you may reach out via email or <a href="https://meetings.hubspot.com/flur">here</a>.
                     </p>
-            <a class="button large-text" bind:this={fullEmailLinkElem} href="mailto:hello@flur.pro" target="_blank">hello@flur.pro</a>
+            <a class="button large-text" bind:this={fullEmailLinkElem} href="mailto:flurpro@gmail.com" target="_blank">flurpro@gmail.com</a>
         </div>
         
         <div class="credits-wrapper" bind:this={creditsElem}>
@@ -102,7 +102,7 @@ async function introAnimations() {
 	<div class="flex-wrapper decor">
         <!-- flur SVG Signature -->
         <svg id="signature" class="name-signature" x="0px" y="0px" viewBox="0 0 375 374.999991" style="stroke: rgb(79, 78, 85);">
-                <a href="https://calendly.com/flur/30min">
+                <a href="https://meetings.hubspot.com/flur">
                     <g>
                         <path
                             bind:this={signaturePath1}

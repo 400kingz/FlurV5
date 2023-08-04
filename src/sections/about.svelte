@@ -97,10 +97,10 @@ function section2IntroAnimations() {
 		</div>
 		<div class="social-button-wrapper">
 			<div bind:this={emailLink}>
-				<span class="button"><a href="mailto:hello@flur.pro" target="_blank" class="clickable sublink link">Email</a></span>
+				<span class="button"><a href="mailto:flurpro@gmail.com" target="_blank" class="clickable sublink link">Email</a></span>
 			</div>
 			<div bind:this={githubLink}>
-				<span class="button" bind:this={githubLink}><a href="https://calendly.com/flur/30min" target="_blank" class="clickable sublink link">Book a call</a></span>
+				<span class="button" bind:this={githubLink}><a href="https://meetings.hubspot.com/flur" target="_blank" class="clickable sublink link">Book a call</a></span>
 			</div>
 		</div>
 	</div>

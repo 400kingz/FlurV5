@@ -106,10 +106,10 @@ function introAnimations() {
 					<div on:click={() => navigate($aboutAnchor)} in:mobileTransitionSwitcher={{ delay: 300 }}>About</div>
 				</li>
 				<li class="mobile">
-					<a href="mailto:hello@flur.pro" target="_blank" in:mobileTransitionSwitcher={{ delay: 350 }}>Email</a>
+					<a href="mailto:flurpro@gmail.com" target="_blank" in:mobileTransitionSwitcher={{ delay: 350 }}>Email</a>
 				</li>
 				<li bind:this={githubElem}>
-					<a href="https://calendly.com/flur/30min" target="_blank" in:mobileTransitionSwitcher={{ delay: 400 }}>Book</a>
+					<a href="https://meetings.hubspot.com/flur" target="_blank" in:mobileTransitionSwitcher={{ delay: 400 }}>Book</a>
 				</li>
 				{/key}
 			</ul>
