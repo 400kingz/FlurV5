@@ -4,8 +4,19 @@
     import { onMount } from "svelte";
     import { loadPagePromise } from "../store";
 
+    let password = "";
     let showChat = false;
     let chatButton;
+
+    const expectedPassword = "flur";
+
+    function handleSubmit() {
+        if (password === expectedPassword) {
+            showChat = true;
+        } else {
+            alert("Incorrect password");
+        }
+    }
 
     function toggleChat() {
         showChat = !showChat;
@@ -43,6 +54,31 @@
 
 {#if showChat}
   <div in:fade out:fade={{ duration: 300 }} class="chat-window">
+    <div class="chatPreview">
+      <h1 class="chatPreviewHeader">Flur.Ai is only accesible when you book a call</h1>
+
+      <h1>
+        
+        <a href="https://meetings.hubspot.com/flur" ><span class="bookNow">Book Now</span></a>
+        
+        to access the flur ai
+        
+      </h1>
+
+      <p>Enter Passcode</p>
+
+      <input type="password" placeholder="Enter Passcode" bind:value={password} />
+
+      <button on:click={handleSubmit}>Submit</button>
+    </div>
+
+
+
+
+  <!-- lets blur out the chat messages so that it can only be unlocked by people with the passcode -->
+  <div class="chat-messages" style="filter: blur(3px);">
+    
+
     <div class="bg">
       <h1>FLUR.<span>AI</span></h1>
     </div>
@@ -91,6 +127,7 @@
       <button>Send</button>
     </div>
   </div>
+  </div>
 {/if}
 
 
@@ -118,13 +155,50 @@
   }
 
   /* Chat messages */
+
+  .chatPreview {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+  }
+
+  .chatPreview > * {
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+  }
+
+  .chatPreview button {
+    background: #87FF65;
+    height: 1rem;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .bookNow {
+    color: #8c52ff;
+    text-decoration: underline;
+  }
+
   .chat-messages {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     overflow-y: scroll;
     width: 100%;
-    color: rgb(228, 230, 232);
+    color: rgba(49, 49, 49, 0.2);
+
   }
 
   /* align User messages to right side of window*/
