@@ -90,7 +90,7 @@ async function introAnimations() {
                     <p class="large-text" bind:this={statusElem}>
                         We are currently accepting freelance work, <br>you may reach out via email or <a href="https://meetings.hubspot.com/flur">here</a>.
                     </p>
-            <a class="button large-text" bind:this={fullEmailLinkElem} href="mailto:flurpro@gmail.com" target="_blank">flurpro@gmail.com</a>
+            <a class="button large-text" bind:this={fullEmailLinkElem} href="mailto:hello@flur.pro" target="_blank">hello@flur.pro</a>
         </div>
         
         <div class="credits-wrapper" bind:this={creditsElem}>
